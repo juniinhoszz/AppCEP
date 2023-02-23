@@ -3,45 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCEP.View.BairrosPorCidade"
              Title="Pesquisar Bairros Por Cidade"
-             BackgroundColor="Purple">
+             >
     <ContentPage.Content>
 
 
         <AbsoluteLayout HorizontalOptions="FillAndExpand"
                             VerticalOptions="FillAndExpand">
+            
             <StackLayout>
-
+                <Label Text="Pesquisar Bairro Por Estado e Cidade" 
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       FontSize="20"
+                       Margin="5,5,5,0"/>
+                
                 <StackLayout>
-                    <StackLayout Orientation="Horizontal">
+                    
                         <Picker x:Name="pck_estado"
                             SelectedIndexChanged="pck_estado_SelectedIndexChanged"
-                            Title="Selecione o Estado: ">
+                            Title="Selecione o Estado aqui"
+                                FontAttributes="Bold"
+                                HorizontalTextAlignment="Center"
+                                Margin="5,0,5,0">
                             <Picker.Items>
                                 <x:String>SP</x:String>
                                 <x:String>MG</x:String>
                             </Picker.Items>
                         </Picker>
-                    </StackLayout>
+                    
 
                     <Picker x:Name="pck_cidade"
                         SelectedIndexChanged="pck_cidade_SelectedIndexChanged"
                         ItemDisplayBinding="{Binding descricao }"
-                        Title="Selecione a Cidade:">
+                        Title="Selecione a Cidade aqui"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            Margin="5,0,5,0">
                     </Picker>
-
                 </StackLayout>
 
                 <ListView x:Name="lst_bairros">
                     <ListView.Header>
                         <StackLayout>
-                            <Label Text="Nome do Bairro:" />
+                            <Label Text="Nome do Bairro:" FontSize="20"
+                                   Margin="10,0,0,5" FontAttributes="Bold" />
                         </StackLayout>
                     </ListView.Header>
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-                                    <Label Text="{Binding descricao_bairro}" />
+                                    <Label Text="{Binding descricao_bairro}" FontSize="12" Margin="5" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

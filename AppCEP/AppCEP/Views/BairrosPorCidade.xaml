@@ -9,28 +9,28 @@
 
         <AbsoluteLayout HorizontalOptions="FillAndExpand"
                             VerticalOptions="FillAndExpand">
-            
+
+
             <StackLayout>
                 <Label Text="Pesquisar Bairro Por Estado e Cidade" 
                        FontAttributes="Bold"
                        HorizontalTextAlignment="Center"
                        FontSize="20"
                        Margin="5,5,5,0"/>
-                
+
                 <StackLayout>
-                    
-                        <Picker x:Name="pck_estado"
+
+                    <Picker x:Name="pck_estado"
                             SelectedIndexChanged="pck_estado_SelectedIndexChanged"
                             Title="Selecione o Estado aqui"
                                 FontAttributes="Bold"
                                 HorizontalTextAlignment="Center"
                                 Margin="5,0,5,0">
-                            <Picker.Items>
-                                <x:String>SP</x:String>
-                                <x:String>MG</x:String>
-                            </Picker.Items>
-                        </Picker>
-                    
+                        <Picker.Items>
+                            <x:String>SP</x:String>
+                            <x:String>MG</x:String>
+                        </Picker.Items>
+                    </Picker>
 
                     <Picker x:Name="pck_cidade"
                         SelectedIndexChanged="pck_cidade_SelectedIndexChanged"
@@ -46,7 +46,7 @@
                     <ListView.Header>
                         <StackLayout>
                             <Label Text="Nome do Bairro:" FontSize="20"
-                                   Margin="10,0,0,5" FontAttributes="Bold" />
+                                   Margin="10,0,0,7" FontAttributes="Bold" />
                         </StackLayout>
                     </ListView.Header>
                     <ListView.ItemTemplate>

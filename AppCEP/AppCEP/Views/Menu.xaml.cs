@@ -16,5 +16,25 @@ namespace AppCEP.Views
         {
             InitializeComponent();
         }
+
+        private void buscar_cep_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Views.BuscaCepPorLogradouro());
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buscar_rua_bairros_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buscar_cidade_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

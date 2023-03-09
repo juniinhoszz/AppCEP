@@ -49,7 +49,7 @@ namespace AppCEP.View
 
         private async void pck_cidade_SelectedIndexChanged(object sender, EventArgs e)
         {
-            -
+            
         }
 
         

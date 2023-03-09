@@ -10,8 +10,8 @@ namespace AppCEP
         {
             InitializeComponent();
 
-            MainPage = new View.BairrosPorCidade();
-        }
+            MainPage = new NavigationPage(new Views.Menu()) { BarBackgroundColor = Color.FromHex("#004677") };
+        }   
 
         protected override void OnStart()
         {

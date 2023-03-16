@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCEP.Views.BuscarEnderecoPorCEP"
+             Title="Buscar Endereço Por CEP">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid ColumnDefinitions="*,100"
+                          RowDefinitions="50">
+                <SearchBar x:Name="txt_logradouro"
+                       Placeholder="Qual o seu CEP?" Grid.Row="0" Grid.Column="0"/>
+                <Button Text="Buscar"
+                    FontAttributes="Bold" Clicked="Button_Clicked"  Margin="5"
+                         BackgroundColor="#004677" TextColor="white" 
+                        Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+            
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

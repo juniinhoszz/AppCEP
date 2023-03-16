@@ -34,7 +34,7 @@ namespace AppCEP.Views
 
         private void buscar_cidade_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new View.BairrosPorCidade());
         }
     }
 }

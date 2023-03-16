@@ -1,31 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCEP.Views.BuscaCepPorLogradouro">
+             x:Class="AppCEP.Views.BuscaCepPorLogradouro"
+             Title="Buscar CEP por Logradouro">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <Grid ColumnDefinitions="*,100"
+                          RowDefinitions="50">
                 <SearchBar x:Name="txt_logradouro"
-                       Placeholder="Qual a sua Rua?" />
+                       Placeholder="Qual a sua Rua?" Grid.Row="0" Grid.Column="0"/>
                 <Button Text="Buscar"
-                    FontAttributes="Bold" />
-            </StackLayout>
+                    FontAttributes="Bold" Clicked="Button_Clicked" Margin="5"
+                         BackgroundColor="#004677" TextColor="white" 
+                        Grid.Row="0" Grid.Column="1"/>
+            </Grid>
 
-            <ListView x:Name="lst_ceps">
+            <ActivityIndicator x:Name="carregando" IsRunning="False" Color="#004677" WidthRequest="50">
+                
+            </ActivityIndicator>
+            
+            <ListView x:Name="lst_ceps" Margin="5">
                 <ListView.Header>
-                    <Grid ColumnDefinitions="Auto, *,*,Auto"
-                          RowDefinitions="Auto">
-                        <Label Grid.Row="0" Grid.Column="0"
-                               Text="CEP" />
+                    <Grid ColumnDefinitions="Auto, *, *, Auto"
+                          RowDefinitions="Auto" BackgroundColor="#004677">
+                        <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"
+                               Text="CEP" FontAttributes="Bold"  FontSize="17" TextColor="white"/>
 
-                        <Label Grid.Row="0" Grid.Column="1"
-                               Text="Logradouro" />
+                        <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"
+                               Text="Logradouro" FontAttributes="Bold"  FontSize="17" TextColor="white"/>
 
-                        <Label Grid.Row="0" Grid.Column="2"
-                               Text="Cidade" />
+                        <Label Grid.Row="0" Grid.Column="2" HorizontalOptions="Center"
+                               Text="Cidade" FontAttributes="Bold"  FontSize="17" TextColor="white"/>
 
-                        <Label Grid.Row="0" Grid.Column="3"
-                               Text="UF" />
+                        <Label Grid.Row="0" Grid.Column="3" HorizontalOptions="Center"
+                               Text="UF" FontAttributes="Bold" FontSize="17" TextColor="white"/>
                     </Grid>
                 </ListView.Header>
 
@@ -35,16 +43,17 @@
                             <Grid ColumnDefinitions="Auto, *,*,Auto"
                                   RowDefinitions="Auto">
                                 <Label Grid.Row="0" Grid.Column="0"
-                               Text="{Binding CEP}" />
+                               Text="{Binding CEP}" TextColor="black"/>
 
                                 <Label Grid.Row="0" Grid.Column="1"
-                               Text="{Binding descricao_logradouro}" />
+                               Text="{Binding descricao}" TextColor="black"/>
 
-                                <Label Grid.Row="0" Grid.Column="2"
-                               Text="{Binding descricao_cidade}" />
+                                <Label Grid.Row="0" Grid.Column="2" 
+                                       Grid.ColumnSpan="1"
+                               Text="{Binding descricao_cidade}" TextColor="black"/>
 
                                 <Label Grid.Row="0" Grid.Column="3"
-                               Text="{Binding UF}" />
+                               Text="{Binding UF}" TextColor="black"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

@@ -44,39 +44,30 @@
 
                 <ListView x:Name="lst_bairros">
                     <ListView.Header>
-                        <StackLayout>
+                        <StackLayout BackgroundColor="#004677">
                             <Label Text="Nome do Bairro:" FontSize="20"
-                                   Margin="10,0,0,7" FontAttributes="Bold" />
+                                   Margin="10,0,0,7" FontAttributes="Bold" 
+                                   TextColor="white"/>
                         </StackLayout>
                     </ListView.Header>
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-                                    <Label Text="{Binding descricao_bairro}" FontSize="12" Margin="5" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding descricao_bairro}" 
+                                           FontSize="15" Margin="5" HorizontalTextAlignment="Center"
+                                           TextColor="black"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
 
-                <StackLayout x:Name="carregando"
-                         IsVisible="False"
-                         AbsoluteLayout.LayoutFlags="PositionProportional"
-                         AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
+                <StackLayout>
+                    <ActivityIndicator x:Name="carregando" IsRunning="False" IsEnabled="False" Color="#004677" WidthRequest="50">
 
-                    <Frame Opacity="0.95"
-                       BackgroundColor="#333"
-                       CornerRadius="10"
-                       BorderColor="#00A54F"
-                       Padding="80">
-                        <StackLayout>
-                            <ActivityIndicator IsRunning="True" Color="#00A54F" />
-                            <Label Text="Carregando..." HorizontalOptions="Center" TextColor="#00A54F" />
-                        </StackLayout>
-                    </Frame>
+                    </ActivityIndicator>
                 </StackLayout>
-
             </StackLayout>
 
         </AbsoluteLayout>

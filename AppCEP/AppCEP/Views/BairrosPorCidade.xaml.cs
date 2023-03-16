@@ -49,9 +49,30 @@ namespace AppCEP.View
 
         private async void pck_cidade_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-        }
+            try
+            {
+                Picker disparador = sender as Picker;
 
-        
+                string cidade_selecionada = disparador.SelectedItem as string;
+
+                carregando.IsEnabled= true;
+                carregando.IsRunning=true;
+
+                List<Bairro> arr_bairros = await DataService.GetBairrosByIdCidade(4666); ;
+
+                lst_bairros.ItemsSource = arr_bairros;
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops", ex.Message, "OK");
+            }finally
+            {
+                carregando.IsEnabled=false;
+                carregando.IsRunning = false;
+            }
+
+
+        }
     }
 }

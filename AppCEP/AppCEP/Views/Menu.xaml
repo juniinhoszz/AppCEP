@@ -20,7 +20,7 @@
                         Text="Buscar CEP por Logradouro" FontAttributes="Bold" 
                         Grid.Column="0" Grid.Row="0" BackgroundColor="#004677" TextColor="white"/>
 
-                <Button x:Name="buscar_cidade" Clicked="buscar_cidade_Clicked" 
+                <Button x:Name="buscar_bairros_cidade" Clicked="buscar_bairros_cidade_Clicked"
                         Text="Buscar Bairros por Cidade" FontAttributes="Bold"
                         Grid.Column="1" Grid.Row="0" BackgroundColor="#004677" TextColor="white"/>
 
@@ -28,8 +28,8 @@
                         Text="Buscar Ruas de Bairros" FontAttributes="Bold"
                         Grid.Column="0" Grid.Row="1" BackgroundColor="#004677" TextColor="white"/>
 
-                <Button Clicked="Button_Clicked" 
-                        Text="Buscar CEP" FontAttributes="Bold"
+                <Button x:Name="buscar_end_cep" Clicked="buscar_end_cep_Clicked"
+                        Text="Buscar Endereço por CEP" FontAttributes="Bold"
                         Grid.Column="1" Grid.Row="1" BackgroundColor="#004677" TextColor="white"/>
 
 

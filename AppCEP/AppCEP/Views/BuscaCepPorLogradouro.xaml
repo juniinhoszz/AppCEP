@@ -15,9 +15,6 @@
                         Grid.Row="0" Grid.Column="1"/>
             </Grid>
 
-            <ActivityIndicator x:Name="carregando" IsRunning="False" Color="#004677" WidthRequest="50">
-                
-            </ActivityIndicator>
             
             <ListView x:Name="lst_ceps" Margin="5">
                 <ListView.Header>
@@ -59,6 +56,13 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <ActivityIndicator x:Name="carregando" 
+                               IsRunning="False"  
+                               Color="#004677" WidthRequest="50"
+                               VerticalOptions="EndAndExpand">
+
+            </ActivityIndicator>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

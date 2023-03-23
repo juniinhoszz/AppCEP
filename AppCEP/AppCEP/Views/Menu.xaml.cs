@@ -22,17 +22,20 @@ namespace AppCEP.Views
             Navigation.PushAsync(new Views.BuscaCepPorLogradouro());
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
         private void buscar_rua_bairros_Clicked(object sender, EventArgs e)
         {
 
         }
 
-        private void buscar_cidade_Clicked(object sender, EventArgs e)
+            
+        
+
+        private void buscar_end_cep_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Views.BuscarEnderecoPorCEP());
+        }
+
+        private void buscar_bairros_cidade_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new View.BairrosPorCidade());
         }

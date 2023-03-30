@@ -17,35 +17,37 @@
 
             <ListView x:Name="lst_end" Margin="3">
                 <ListView.Header>
-                    <Grid ColumnDefinitions="Auto, *, *,*,*,*, Auto"
+                    <Grid ColumnDefinitions="55, *, *,*,*, *"
                           RowDefinitions="Auto" BackgroundColor="#004677">
-                        <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"
-                               Text="CEP" FontAttributes="Bold"  FontSize="13" TextColor="white"
-                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                        <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"
+                        <Label Grid.Row="0" Grid.Column="0" 
+                               Text="CEP" FontAttributes="Bold"  FontSize="13" TextColor="white"
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                               />
+
+                        <Label Grid.Row="0" Grid.Column="1" 
                                Text="Descrição" FontAttributes="Bold"  FontSize="13" TextColor="white"
                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                        <Label Grid.Row="0" Grid.Column="2" HorizontalOptions="Center"
-                               Text="Descrição do Bairro" FontAttributes="Bold"  FontSize="13" 
-                               TextColor="white" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Grid.Row="0" Grid.Column="2" 
+                               Text="Bairro" FontAttributes="Bold"  FontSize="13" 
+                               TextColor="white" HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="Center"/>
 
-                        <Label Grid.Row="0" Grid.Column="3" HorizontalOptions="Center"
+                        <Label Grid.Row="0" Grid.Column="3" 
                                Text="Cidade" FontAttributes="Bold" FontSize="13" TextColor="white"
                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                        <Label Grid.Row="0" Grid.Column="4" HorizontalOptions="Center"
-                               Text="Complemento" FontAttributes="Bold" FontSize="13" TextColor="white"
+                        <Label Grid.Row="0" Grid.Column="4" 
+                               Text="UF" FontAttributes="Bold" FontSize="13" TextColor="white"
                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                        <Label Grid.Row="0" Grid.Column="5" HorizontalOptions="Center"
+
+
+                        <Label Grid.Row="0" Grid.Column="5" 
                                Text="Código do IBGE" FontAttributes="Bold" FontSize="13" TextColor="white"
                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                        <Label Grid.Row="0" Grid.Column="6" HorizontalOptions="Center"
-                               Text="UF" FontAttributes="Bold" FontSize="13" TextColor="white"
-                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="1"/>
                     </Grid>
                 </ListView.Header>
 
@@ -53,39 +55,41 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid ColumnDefinitions="Auto, *, *,*,*,*, Auto"
+                            <Grid ColumnDefinitions="55, *, *,*,*,*"
                                   RowDefinitions="110">
+                                
                                 <Label Grid.Row="0" Grid.Column="0"
                                Text="{Binding CEP}" TextColor="black" 
-                                       FontSize="12"/>
+                                       FontSize="12"
+                                       HorizontalTextAlignment="Center"/>
 
+                                
                                 <Label Grid.Row="0" Grid.Column="1"
                                Text="{Binding descricao}" TextColor="black" 
-                                       FontSize="12"/>
+                                       FontSize="12"
+                                       HorizontalTextAlignment="Center"/>
 
+                                
                                 <Label Grid.Row="0" Grid.Column="2" 
-                                       Grid.ColumnSpan="1"
                                Text="{Binding descricao_bairro}" TextColor="black" 
-                                       FontSize="12"/>
+                                       FontSize="12"
+                                       HorizontalTextAlignment="Center"/>
+
 
                                 <Label Grid.Row="0" Grid.Column="3" 
-                                       Grid.ColumnSpan="1"
                                Text="{Binding descricao_cidade}" TextColor="black" 
-                                       FontSize="12"/>
+                                       FontSize="12"
+                                       HorizontalTextAlignment="Center"/>
 
-                                <Label x:Name="comple" Grid.Row="0" Grid.Column="4" 
-                                       Grid.ColumnSpan="1"
-                               Text="{Binding complemento}" TextColor="black" 
-                                       FontSize="12"/>
+                                <Label Grid.Row="0" Grid.Column="4" 
+                               Text="{Binding UF}" TextColor="black" 
+                                       FontSize="12"
+                                       HorizontalTextAlignment="Center"/>
 
                                 <Label Grid.Row="0" Grid.Column="5" 
-                                       Grid.ColumnSpan="1"
                                Text="{Binding codigo_cidade_ibge}" TextColor="black" 
                                        FontSize="12"/>
 
-                                <Label Grid.Row="0" Grid.Column="6"
-                               Text="{Binding uf}" TextColor="black" 
-                                       FontSize="12"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

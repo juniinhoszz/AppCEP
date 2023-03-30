@@ -32,6 +32,7 @@ namespace AppCEP.Service
             return end;
         }
 
+        ///////////
         public static async Task<List<Bairro>> GetBairrosByIdCidade(int id_cidade)
         {
             List<Bairro> arr_bairros = new List<Bairro>();
@@ -71,6 +72,8 @@ namespace AppCEP.Service
             }
             return arr_cidades;
         }
+
+        ////
         public static async Task<List<Logradouro>> GetLogradouroByBairroAndIdCIdade(int id_cidade, string bairro)
         {
             List<Logradouro> arr_logradouros = new List<Logradouro>();

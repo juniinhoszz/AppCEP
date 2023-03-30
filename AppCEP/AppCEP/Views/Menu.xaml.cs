@@ -24,12 +24,10 @@ namespace AppCEP.Views
 
         private void buscar_rua_bairros_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new Views.BuscaRuasPorBairro());
         }
 
             
-        
-
         private void buscar_end_cep_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Views.BuscarEnderecoPorCEP());

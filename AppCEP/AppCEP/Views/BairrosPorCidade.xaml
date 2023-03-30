@@ -16,7 +16,8 @@
                        FontAttributes="Bold"
                        HorizontalTextAlignment="Center"
                        FontSize="20"
-                       Margin="5,5,5,0"/>
+                       Margin="5,5,5,0"
+                       TextColor="black"/>
 
                 <StackLayout>
 

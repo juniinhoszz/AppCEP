@@ -65,7 +65,10 @@
                 </ListView>
 
                 <StackLayout>
-                    <ActivityIndicator x:Name="carregando" IsRunning="False" IsEnabled="False" Color="#004677" WidthRequest="50">
+                    <ActivityIndicator x:Name="carregando"
+                                       IsRunning="False" IsEnabled="False"
+                                       Color="#004677" WidthRequest="50"
+                                       VerticalOptions="EndAndExpand">
 
                     </ActivityIndicator>
                 </StackLayout>

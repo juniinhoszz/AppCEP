@@ -26,5 +26,10 @@ namespace AppCEP.Views
         {
 
         }
+
+        private void pck_bairro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

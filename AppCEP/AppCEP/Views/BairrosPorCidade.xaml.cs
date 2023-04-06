@@ -31,7 +31,11 @@ namespace AppCEP.View
         {
             try
             {
+                simcarregando();
+
                 Picker disparador = sender as Picker;
+
+                simcarregando();
 
                 string estado_selecionado = disparador.SelectedItem as string;
 
@@ -45,34 +49,42 @@ namespace AppCEP.View
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
             }
+            finally { naocarregando(); }
         }
 
         private async void pck_cidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
+                simcarregando();
+
+                lista_bairros.Clear();
+
                 Picker disparador = sender as Picker;
 
-                string cidade_selecionada = disparador.SelectedItem as string;
+                int id_cidade = disparador.SelectedIndex;
 
-                carregando.IsEnabled= true;
-                carregando.IsRunning=true;
+                List<Bairro> arr_bairros = await DataService.GetBairrosByIdCidade(id_cidade); ;
 
-                List<Bairro> arr_bairros = await DataService.GetBairrosByIdCidade(4666); ;
-
-                lst_bairros.ItemsSource = arr_bairros;
+                arr_bairros.ForEach(item => lista_bairros.Add(item));
 
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
-            }finally
-            {
-                carregando.IsEnabled=false;
-                carregando.IsRunning = false;
             }
+            finally { naocarregando(); }
+        }
 
-
+        public void simcarregando()
+        {
+            carregando.IsEnabled = true;
+            carregando.IsRunning = true;
+        }
+        public void naocarregando()
+        {
+            carregando.IsEnabled = false;
+            carregando.IsRunning = false;
         }
     }
 }

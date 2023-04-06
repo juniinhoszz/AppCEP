@@ -38,7 +38,16 @@
                             HorizontalTextAlignment="Center"
                             Margin="5,0,5,0">
                 </Picker>
-                        
+
+                <Picker x:Name="pck_bairro"
+                        SelectedIndexChanged="pck_bairro_SelectedIndexChanged"
+                        ItemDisplayBinding="{Binding descricao_bairro }"
+                        Title="Selecione a Cidade aqui"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            Margin="5,0,5,0">
+                </Picker>
+
             </StackLayout>
                 </StackLayout>
 

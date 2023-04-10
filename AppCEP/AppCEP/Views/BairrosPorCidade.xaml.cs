@@ -35,12 +35,9 @@ namespace AppCEP.View
 
                 Picker disparador = sender as Picker;
 
-                simcarregando();
-
                 string estado_selecionado = disparador.SelectedItem as string;
 
                 List<Cidade> arr_cidades = await DataService.GetCidadesByUf(estado_selecionado);
-
                 lista_cidades.Clear();
 
                 arr_cidades.ForEach(i => lista_cidades.Add(i));
@@ -66,7 +63,7 @@ namespace AppCEP.View
 
                 List<Bairro> arr_bairros = await DataService.GetBairrosByIdCidade(id_cidade); ;
 
-                arr_bairros.ForEach(item => lista_bairros.Add(item));
+                arr_bairros.ForEach(i => lista_bairros.Add(i));
 
             }
             catch (Exception ex)

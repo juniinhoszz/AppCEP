@@ -37,5 +37,10 @@ namespace AppCEP.Views
         {
             Navigation.PushAsync(new View.BairrosPorCidade());
         }
+
+        private void buscar_cidade_uf_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Views.CidadePorEstado());
+        }
     }
 }

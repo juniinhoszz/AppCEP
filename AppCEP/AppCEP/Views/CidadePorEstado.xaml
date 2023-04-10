@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCEP.Views.CidadePorEstado">
+    <ContentPage.Content>
+        <AbsoluteLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <StackLayout>
+                    <Picker x:Name="pck_estado"
+                            SelectedIndexChanged="pck_estado_SelectedIndexChanged"  
+                            Title="Selecione o estado aqui"
+                            >
+                        <Picker.Items>
+                            <x:String>SP</x:String>
+                            <x:String>MG</x:String>
+                            <x:String>RS</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                </StackLayout>
+                
+
+                <ListView x:Name="lst_cidade">
+                    <ListView.Header>
+                        <Grid ColumnDefinitions="Auto, *, *, Auto"
+                          RowDefinitions="Auto"
+                          >
+                            <Label Grid.Row="0" Grid.Column="0"
+                               Text="Cidade: "/>
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid ColumnDefinitions="*, *, *, *"
+                                  RowDefinitions="Auto">
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding descricao}" TextColor="Black"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <ActivityIndicator x:Name="carregando" IsRunning="False"/>
+
+            </StackLayout>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

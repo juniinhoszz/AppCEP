@@ -13,7 +13,7 @@
                    FontAttributes="Bold"/>
 
             <Grid ColumnDefinitions="*,*"
-                  RowDefinitions="65,65,65,65"
+                  RowDefinitions="65,65"
                   Margin="3,0,3,0">
 
                 <Button x:Name="buscar_cep" Clicked="buscar_cep_Clicked" 
@@ -35,6 +35,11 @@
 
 
             </Grid>
+            <Button x:Name="buscar_cidade_uf" Clicked="buscar_cidade_uf_Clicked"
+                        Text="Buscar Cidades por Estado" FontAttributes="Bold"
+                        HeightRequest="65"
+                        BackgroundColor="#004677" TextColor="white"
+                        HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

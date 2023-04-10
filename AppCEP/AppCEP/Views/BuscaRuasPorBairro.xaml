@@ -49,6 +49,24 @@
                 </Picker>
 
             </StackLayout>
+
+                <ListView x:Name="lst_endereco">
+                    <ListView.Header>
+                        <StackLayout>
+                            <Label Text="Endereço: "/>
+                        </StackLayout>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding descricao}"/>                                   
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
                 </StackLayout>
 
                 
